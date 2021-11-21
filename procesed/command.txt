@@ -1,0 +1,4 @@
+awk -F',' 'NR > 1{printf("%s MOL%04d\n",$1,NR-1)}' ./filtering_missing.csv > actives_output.smi
+
+rd_filters filter --in actives_output.smi --prefix filtered_lactamase
+
